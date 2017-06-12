@@ -1,13 +1,13 @@
 CACHE MANIFEST
-#ver:6/12/2017, 10:02:49 AM
+#ver:6/12/2017, 10:18:45 AM
 #plugin:4.7.0
 
 CACHE:
-/ProgrVueApp/static/js/vendor.53df1f6ec7abae09dec8.js
-/ProgrVueApp/static/js/app.27b25b283ad99f905c9d.js
-/ProgrVueApp/static/js/manifest.753004d647c84b02f94a.js
-/ProgrVueApp/static/css/app.53c474869e28671f0e8b847f3961fc4b.css
-/ProgrVueApp/../
+/MijnGarage/static/js/vendor.16e9bacb686d5fcfbd6e.js
+/MijnGarage/static/js/app.27b25b283ad99f905c9d.js
+/MijnGarage/static/js/manifest.9ff62e03656b1352e32c.js
+/MijnGarage/static/css/app.53c474869e28671f0e8b847f3961fc4b.css
+/MijnGarage/../
 
 NETWORK:
 *
