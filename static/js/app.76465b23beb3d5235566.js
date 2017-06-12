@@ -1030,6 +1030,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
  * @param {Object} commit
  * @param {String} licensePlate
  */
+
+var apiUrl = "https://192.168.2.57/mijn-garage-backend/public/api/v1/";
+
 const getVehicleDataFromLicensePlate = ({ commit }, licensePlate) => {
     console.log(licensePlate);
     licensePlate = licensePlate.replace("-", "");
@@ -1045,7 +1048,7 @@ const getVehicleDataFromLicensePlate = ({ commit }, licensePlate) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/cardata/" + licensePlate.toUpperCase(), myInit);
+    var myRequest = new Request(apiUrl + "cardata/" + licensePlate.toUpperCase(), myInit);
 
     fetch(myRequest).then(function (response) {
         return response.json();
@@ -1080,7 +1083,7 @@ const getVehicleMaintenanceDataFromLicensePlate = ({ commit }, licensePlate) => 
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/carmaintenancedata/" + licensePlate.toUpperCase(), myInit);
+    var myRequest = new Request(apiUrl + "carmaintenancedata/" + licensePlate.toUpperCase(), myInit);
 
     fetch(myRequest).then(function (response) {
         return response.json();
@@ -1122,7 +1125,7 @@ const saveCar = ({ commit }, saveData) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/savevehicle", myInit);
+    var myRequest = new Request(apiUrl + "savevehicle", myInit);
 
     fetch(myRequest).then(function (response) {}).then(function () {
         console.log("done!");
@@ -1155,7 +1158,7 @@ const deleteVehicles = ({ commit }, arrayOfVehicleIds) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/deletevehicles", myInit);
+    var myRequest = new Request(apiUrl + "deletevehicles", myInit);
 
     fetch(myRequest).then(function (response) {}).then(function () {
         console.log("done!");
@@ -1178,7 +1181,7 @@ const getVehiclesOfUser = ({ commit }, userId) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/getvehiclesofuser/" + userId, myInit);
+    var myRequest = new Request(apiUrl + "getvehiclesofuser/" + userId, myInit);
 
     fetch(myRequest).then(function (response) {
         return response.json();
@@ -1208,7 +1211,7 @@ const getNotificationsOfUser = ({ commit }, userId) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/getnotificationsofuser/" + userId, myInit);
+    var myRequest = new Request(apiUrl + "getnotificationsofuser/" + userId, myInit);
 
     fetch(myRequest).then(function (response) {
         return response.json();
@@ -1234,7 +1237,7 @@ const getNotificationCount = ({ commit }, userId) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/getnotificationcount/" + userId, myInit);
+    var myRequest = new Request(apiUrl + "getnotificationcount/" + userId, myInit);
 
     fetch(myRequest).then(function (response) {
         return response.json();
@@ -1259,7 +1262,7 @@ const markNotificationsAsRead = ({ commit }, userId) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/marknotificationsasread/" + userId, myInit);
+    var myRequest = new Request(apiUrl + "marknotificationsasread/" + userId, myInit);
 
     fetch(myRequest).then(function (response) {}).then(function () {
         console.log("Notification marked as read");
@@ -1295,7 +1298,7 @@ const updateUserNotificationId = ({ commit, state }, pushNotificationId) => {
         cache: 'default'
     };
 
-    var myRequest = new Request("http://192.168.2.57/mijn-garage-backend/public/api/v1/updateuserpushid", myInit);
+    var myRequest = new Request(apiUrl + "updateuserpushid", myInit);
 
     fetch(myRequest).then(function (response) {}).then(function () {
         console.log("update done!");
@@ -2235,4 +2238,4 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 
 /***/ })
 ]),[49]);
-//# sourceMappingURL=app.27b25b283ad99f905c9d.js.map
+//# sourceMappingURL=app.76465b23beb3d5235566.js.map
